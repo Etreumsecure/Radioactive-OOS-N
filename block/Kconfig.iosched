@@ -99,6 +99,14 @@ config IOSCHED_SIOPLUS
 	  basic merging, trying to keep a minimum overhead. It is aimed
 	  mainly for aleatory access devices (eg: flash devices).  
 
+
+config IOSCHED_ZEN
+	tristate "Zen I/O scheduler"
+	default y
+	---help---
+	  FCFS, dispatches are back-inserted, deadlines ensure fairness.
+	  Should work best with devices where there is no travel delay.
+
 choice
 	prompt "Default I/O scheduler"
 	default DEFAULT_CFQ
@@ -139,7 +147,19 @@ choice
 	config DEFAULT_SIOPLUS
 		bool "SIOPLUS" if IOSCHED_SIOPLUS=y
 
+<<<<<<< HEAD
 >>>>>>> 3094d3a... block: add sioplus scheduler
+=======
+	config DEFAULT_TRIPNDROID
+		bool "TRIPNDROID" if IOSCHED_TRIPNDROID=y
+
+	config DEFAULT_VR
+		bool "V(R)" if IOSCHED_VR=y
+
+	config DEFAULT_ZEN
+		bool "ZEN" if IOSCHED_ZEN=y
+
+>>>>>>> 90e8a96... block: add zen scheduler
 endchoice
 
 config DEFAULT_IOSCHED
@@ -154,7 +174,13 @@ config DEFAULT_IOSCHED
 =======
 	default "fifo" if DEFAULT_FIFO
 	default "sioplus" if DEFAULT_SIOPLUS
+<<<<<<< HEAD
 >>>>>>> 3094d3a... block: add sioplus scheduler
+=======
+	default "tripndroid" if DEFAULT_TRIPNDROID
+	default "vr" if DEFAULT_VR
+	default "zen" if DEFAULT_ZEN
+>>>>>>> 90e8a96... block: add zen scheduler
 
 endmenu
 
