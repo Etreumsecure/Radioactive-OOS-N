@@ -139,27 +139,15 @@ choice
 	config DEFAULT_SIO
 		bool "SIO" if IOSCHED_SIO=y
 
-<<<<<<< HEAD
-=======
 	config DEFAULT_FIFO
 		bool "fifo" if IOSCHED_FIFO=y
 
 	config DEFAULT_SIOPLUS
 		bool "SIOPLUS" if IOSCHED_SIOPLUS=y
 
-<<<<<<< HEAD
->>>>>>> 3094d3a... block: add sioplus scheduler
-=======
-	config DEFAULT_TRIPNDROID
-		bool "TRIPNDROID" if IOSCHED_TRIPNDROID=y
-
-	config DEFAULT_VR
-		bool "V(R)" if IOSCHED_VR=y
-
 	config DEFAULT_ZEN
 		bool "ZEN" if IOSCHED_ZEN=y
 
->>>>>>> 90e8a96... block: add zen scheduler
 endchoice
 
 config DEFAULT_IOSCHED
@@ -170,17 +158,6 @@ config DEFAULT_IOSCHED
 	default "fiops" if DEFAULT_FIOPS
 	default "noop" if DEFAULT_NOOP
 	default "sio" if DEFAULT_SIO
-<<<<<<< HEAD
-=======
-	default "fifo" if DEFAULT_FIFO
-	default "sioplus" if DEFAULT_SIOPLUS
-<<<<<<< HEAD
->>>>>>> 3094d3a... block: add sioplus scheduler
-=======
-	default "tripndroid" if DEFAULT_TRIPNDROID
-	default "vr" if DEFAULT_VR
-	default "zen" if DEFAULT_ZEN
->>>>>>> 90e8a96... block: add zen scheduler
 
 endmenu
 
