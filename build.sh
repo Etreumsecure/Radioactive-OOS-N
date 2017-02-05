@@ -3,8 +3,8 @@ rm .version
 make mrproper
 make clean
 # Kernel Details
-VER="_V1.0.6_oneplus3-3T"
-BASE_AK_VER="Radioactive"
+VER="_V1.0.0_oneplus3-3T"
+BASE_AK_VER="Radioactive_OOS"
 
 # Vars
 export ARCH=arm64
